@@ -1,0 +1,12 @@
+[package]
+name = "fake-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+local-ip-address = "0.6.3"
+rcgen           = { version = "0.13.2" }
+rustls          = { version = "0.23.20", default-features = false, features = ["std", "ring"] }
+rustls-cert-gen = { version = "0.1.0" }
+tokio           = { version = "1.42.0", features = ["macros", "rt-multi-thread", "time", "net", "io-util"] }
+tokio-rustls    = { version = "0.26.1", default-features = false, features = ["logging", "tls12", "ring"] }

@@ -1,0 +1,9 @@
+[package]
+name = "fake-client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rustls          = { version = "0.23.20", default-features = false, features = ["std", "ring"] }
+tokio           = { version = "1.42.0", features = ["macros", "rt-multi-thread", "time", "net", "io-util"] }
+tokio-rustls    = { version = "0.26.1", default-features = false, features = ["logging", "tls12", "ring"] }
