@@ -4,11 +4,11 @@ This is a quick proof of concept that demonstrates:
 
 * using `rcgen` to create a CA cert for a server
 * determining local IP addresses using the `local-ip-address` crate
-* creating ephemeral leaf certificates using the generated CA certificate
+* creating ephemeral leaf certificates with `rcgen` using the generated CA certificate
 * hosting a TCP/TLS server using these certs using `rustls` (with `ring` as a provider)
 * connecting to the TCP/TLS server from a client using `rustls` (with `ring` as a provider)
 
-In general, the `rustls` [doesn't like using ca certs directly]:
+In general, `rustls` [doesn't like using ca certs directly]:
 
 > rustls does not and will not support... Using CA certificates directly to authenticate a
 > server/client (often called “self-signed certificates”). Rustls’ default certificate
